@@ -15,6 +15,20 @@
   "engines": {
     "node": ">= 0.8.0"
   },
+  "homepage": "https://github.com/wdonayre/grunt-grae",
+  "author": [
+    {
+      "name": "William Donayre Jr.",
+      "url": "https://github.com/wdonayre"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wdonayre/grunt-grae.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wdonayre/grunt-grae/issues"
+  },
   "license": "MIT",
   "devDependencies": {
     "grunt-contrib-clean": "~0.5.0",
