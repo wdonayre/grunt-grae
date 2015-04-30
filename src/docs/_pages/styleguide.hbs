@@ -1,0 +1,46 @@
+---
+layout: default.hbs
+title: Base
+slug: base
+lead: "Lorem Ipsum Dolor"
+base_url: "../"
+---
+
+<div class="docs-container mt5">
+    <div class="docs-row">
+
+        <div class="docs-col-sm-3">
+            <div id="leftnav" class="docs-leftnav">
+                <ul class="nav docs-nav docs-nav-pills docs-nav-stacked docs-nav-truste">
+                    {{#compile nav.sub}}
+                        <li>
+                            <a href="#{{name}}">{{name}}</a>
+                            {{#if sub}}
+                                <ul>
+                                    {{{compile sub}}}
+                                </ul>
+                            {{/if}}
+                        </li>
+                    {{/compile}}
+                </ul>
+            </div>
+        </div>
+
+        <div class="docs-col-sm-9">
+            <div class="docs-demo-wrapper">
+                {{#recursive nav=nav src="<%= site.docs.toolkit %>/<%= nav.name %>/" type="content" separator="<!-- BASE -->"}}
+                    <h3 id="{{{@basename}}}" class="docs-demo-title">{{@title}}</h3>
+                    <p>{{{@description}}}</p>
+                    <div class="docs-ex-wrapper">
+                        {{{@content}}}
+                    </div>
+                    <div class="docs-ex-code-wrapper">
+                        <pre><code class="html">{{{@content}}}</code></pre>
+                    </div>
+                {{/recursive}}
+
+
+            </div>
+        </div>
+    </div>
+</div>

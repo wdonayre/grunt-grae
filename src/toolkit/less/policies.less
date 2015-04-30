@@ -1,0 +1,375 @@
+// your core variables and mixins
+@import "core.less";
+
+.table-policies {
+  > tbody > tr > td {
+    background-color: #fff;
+    border-color: #e7e7e7;
+
+    .btn-group {
+      margin-right: 10px;
+      > .btn { padding: 2px 6px; }
+    }
+  }
+
+  > thead,
+  > tbody {
+    > tr {
+      > th,
+      > td {
+        &:first-child { width: 3%; }
+        &:nth-child(2) { width: 4%; }
+        &:nth-child(3) { width: 43%; }
+        &:nth-child(4) { width: 20%; }
+        &:nth-child(5) { width: 15%; }
+        &:nth-child(6) { width: 10%; }
+        &:nth-child(7) {
+          width: 5%;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+// Add Document Modal
+.modal-document-form {
+  .modal-title {
+    line-height: normal;
+    font-size: 18px;
+  }
+
+  .modal-header { border-bottom: 0; }
+  .modal-body { padding: 0; }
+
+  .nav-tabs {
+    border: 0;
+    border-top: 1px solid #ddd;
+    background-color: #ddd;
+    .border-radius(0);
+
+    > li {
+      margin: 0;
+
+      > a {
+        margin: 0;
+        padding: 17px 20px 17px 55px;
+        font-weight: 500;
+        border: 0;
+        .border-radius(0);
+
+        &:hover {
+          border: 0;
+          margin: 0;
+        }
+
+        &:before {
+          width: 25px;
+          height: 25px;
+          border: 2px solid #666;
+          position: absolute;
+          left: 20px;
+          top: 14px;
+          padding: 1px 0 0 7px;
+          font-weight: 500;
+          .border-radius(50px);
+        }
+      }
+
+      &.active a,
+      &.active a:hover,
+      &.active a:focus {
+        border: 0;
+        margin: 0;
+        color: #333;
+        background-color: #fff;
+        &:before {
+          border-color: #333;
+        }
+      }
+
+      &:first-child > a:before { content: '1'; }
+      &:nth-child(2) > a:before { content: '2'; }
+      &:nth-child(3) > a:before { content: "3"; }
+    }
+  }
+
+  .tab-content, .modal-footer { padding: 20px; }
+  .close { margin-top: -4px; }
+
+
+  .control-label {
+    margin-top: 2px;
+    display: inline-block;
+  }
+
+}
+
+.document-details-form {
+  .alert {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .close { margin-top: 3px; }
+  }
+
+  .control-label {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+  }
+}
+
+.citationFormWrapper {
+  .control-label {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: #666;
+  }
+}
+
+.citationListTitle {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #ddd;
+}
+
+// Controls Styles
+
+.tableControls {
+  > thead,
+  > tbody {
+    > tr {
+      > th,
+      > td {
+        &:first-child { width: 5%; }
+        &:nth-child(2) { width: 40%; }
+        &:nth-child(3) { width: 20%; }
+        &:nth-child(4) { width: 10%; }
+        &:nth-child(5) { width: 40%; }
+        &:nth-child(6) { width: 5%; }
+      }
+    }
+  }
+}
+
+
+.modal-create-control {
+  padding: 0;
+
+  .nav-tabs {
+    &, > li > a { .border-radius(0); }
+
+    > li {
+      position: relative;
+
+      a {
+        border: 0 !important;
+        padding: 17px 25px 17px 55px;
+        font-weight: 500;
+
+        &:before {
+          position: absolute;
+          top: 14px;
+          left: 20px;
+          content: '1';
+          font-size: 14px;
+          width: 25px;
+          height: 25px;
+          border: 2px solid #636e7b;
+          color: #636e7b;
+          padding-left: 6.5px;
+          .border-radius(100px);
+        }
+
+        &:hover::before {
+          border-color: #333;
+          color: #333;
+        }
+      }
+
+      &.active > a {
+        color: @brand-primary !important;
+
+        &:before {
+          border-color: @brand-primary;
+          color: @brand-primary;
+        }
+      }
+
+      &:nth-child(2) > a:before { content: '2'; }
+
+    }
+  }
+
+  .input-expression { padding: 9px 10px 10px 10px; }
+  .panel-heading { background: none; }
+}
+
+.modal-tab-title { color: #333; }
+
+.modal {
+  .tab-content {
+    padding: 20px;
+    min-height: 350px;
+  }
+
+  .panel-group { margin: 0; }
+
+  .panel-group {
+    .panel { .box-shadow(none); }
+
+    .panel-heading {
+      padding: 10px 10px 10px 15px;
+      border-bottom: 1px solid #e7e7e7;
+      position: relative;
+
+      p {
+        margin: 0;
+        font-size: 11px;
+      }
+
+      a {
+        &:hover {
+          cursor: pointer;
+          text-decoration: none;
+        }
+
+        &:before {
+          position: absolute;
+          top: 11px;
+          left: 0;
+          content: '\f078';
+          font-size: 11px;
+          font-family: 'FontAwesome';
+        }
+
+        &.collapsed:before { content: '\f054'; }
+
+        > .text-muted {
+          font-weight: 400;
+          color: #999;
+          font-style: italic;
+        }
+      }
+
+      + .panel-collapse > .panel-body { border: 0; }
+
+    }
+  }
+}
+
+.btn-add-question {
+  border: 1px solid @brand-primary;
+  color: @brand-primary;
+  background: none;
+  font-weight: 500;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: @brand-primary;
+  }
+}
+
+.dropdown-question { min-width: 132px; }
+
+.list-questions {
+  > .list-group-item {
+    padding: 10px 30px 10px 10px;
+    position: relative;
+    line-height: normal;
+
+    &:first-child {
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+
+    > h5 {
+      margin: 0;
+      font-size: @font-size-base;
+      font-weight: 500;
+      color: #333;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.active {
+      background-color: #ddd;
+      border-color: #ccc;
+      color: #333;
+    }
+
+    > .remove {
+      position: absolute;
+      top: 17px;
+      right: 15px;
+      cursor: pointer;
+      color: #999;
+    }
+  }
+}
+
+.questionWrapper {
+  .question-editable { color: #333; }
+  .description-editable { color: #666; }
+  .question-title { margin: 0 0 5px 0; }
+
+  .question-title,
+  .question-description {
+    .form-control { width: 450px; }
+  }
+
+  .choice-list {
+    > .row:first-child { padding-top: 0; }
+
+    .btn-rm {
+      padding: 0;
+      border: 0;
+      line-height: normal;
+      vertical-align: middle;
+      margin-right: 10px;
+      margin-top: 10px;
+      background-color: transparent;
+    }
+  }
+
+  .addChoice {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 11px;
+  }
+}
+
+.question-action {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-top: 0;
+  padding: 5px 15px;
+
+  .btn-link {
+    font-size: 11px;
+    color: #666;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: #333;
+      text-decoration: none;
+    }
+  }
+}
+
+.choice-list .select2-container-multi.sel-xs .select2-choices li { padding: 6px 5px 5px 5px; }
+.control-label span.ast { color: #ff0000; }

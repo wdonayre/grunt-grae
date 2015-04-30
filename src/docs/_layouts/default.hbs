@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    {{> header }}
+  </head>
+  <body data-spy="scroll" data-target="#leftnav">
+    {{>menu}}
+    <div class="docs-container">
+        <div class="docs-row">
+            <div class="docs-col-sm-12">
+                {{> body }}
+            </div>
+        </div>
+    </div>
+    <section>
+        {{> footer }}
+    </section>
+  {{>footer-assets}}
+  </body>
+</html>

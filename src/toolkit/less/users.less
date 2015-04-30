@@ -1,0 +1,170 @@
+// your core variables and mixins
+@import "core.less";
+
+.panel-signup {
+  width: 600px;
+  position: absolute;
+  left: 50%;
+
+  .panel {
+    position: relative;
+    left: -50%;
+    margin-top: 80px;
+    background: none;
+    box-shadow: none;
+
+    .panel-body-wfooter {
+      border-bottom: 0;
+      -moz-border-radius: 5px 5px 0 0;
+      -webkit-border-radius: 5px 5px 0 0;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .title {
+      text-align: center;
+      color: #333;
+      font-weight: 500;
+
+      i {
+        vertical-align: middle;
+        margin-top: -8px;
+      }
+    }
+  }
+
+  .form-horizontal {
+    margin-top: 30px;
+    margin-bottom: 0;
+
+    .control-label {
+      text-align: left;
+      font-weight: 500;
+    }
+  }
+
+  .form-group {
+    padding: 0 10px;
+
+    &:first-child {
+      padding: 20px 10px;
+      background: #fcfcfc;
+      border: 1px solid #eee;
+      .border-radius();
+    }
+  }
+
+  .panel-footer {
+    padding: 20px 45px 20px 25px;
+    border: 1px solid #ddd;
+    background: #fcfcfc;
+
+    &:after {
+      clear: both;
+      display: block;
+      content: '';
+    }
+
+    .ckbox {
+      font-size: 12px;
+    }
+  }
+
+  .alert {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: 20px;
+  }
+}
+
+.panel-signin {
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+
+  .panel {
+    position: relative;
+    left: -50%;
+    background: none;
+  }
+
+  .form-control {
+    padding-left: 50px;
+    background: transparent;
+  }
+
+  .ckbox label {
+    margin-bottom: 0 !important;
+    font-size: @font-size-base;
+  }
+
+  .form-group i {
+    position: absolute;
+    top: 9px;
+    left: 13px;
+    font-size: 16px;
+    border-right: 1px solid #ddd;
+    padding: 2px 10px 2px 0;
+    line-height: normal;
+    color: #bbb;
+  }
+
+  .btn {
+    background-color: #7cc851;
+    color: #fff;
+    padding: 10px;
+    font-weight: 500;
+    margin-top: 30px;
+  }
+
+  .link { font-size: @font-size-base; }
+  .alert { padding: 7px 10px; }
+}
+
+.panel-signup,
+.panel-signin {
+  .panel {
+    .panel-body {
+      padding: 40px;
+      padding-bottom: 20px;
+      border: 1px solid #d7d7d7;
+      background-color: #fff;
+      .border-radius(5px);
+    }
+  }
+}
+
+.panel-bottom {
+  font-size: 11px;
+
+  .nav {
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+
+    > li {
+      display: inline-block;
+
+      > a {
+        color: #666;
+        padding: 10px 15px;
+        .transition();
+
+        &:hover {
+          color: #333;
+          background: none;
+        }
+      }
+    }
+  }
+
+  .pull-right span {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+.panel-activate { width: 500px; }
+.createpwordwrapper { margin: 20px auto; }
+
+

@@ -1,0 +1,42 @@
+
+.modal-content {
+  border: 0;
+  background: @brand-default;
+  border-radius: @border-radius-base;
+  .box-shadow(0 3px 4px rgba(0, 0, 0, 0.5));
+}
+
+.modal-header {
+  background-color: #fff;
+  border-bottom: 0;
+  .border-top-radius(@border-radius-base);
+  .close {
+    .transition(all 0.2s ease-out 0s);
+  }
+}
+
+.modal-backdrop.in { opacity: 0.30; }
+.modal-body { background-color: #fff; }
+
+.modal-title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.modal-footer {
+  padding: 15px 17px;
+  background-color: #fcfcfc;
+  border-top-color: darken(@brand-default, 5%);
+  .border-bottom-radius(@border-radius-base);
+
+  .btn-default {
+    background-color: darken(@brand-default, 8%);
+    border-color: darken(@brand-default, 12%);
+    &:hover,
+    &:focus {
+      background-color: darken(@brand-default, 12%);
+      border-color: darken(@brand-default, 16%);
+    }
+  }
+}

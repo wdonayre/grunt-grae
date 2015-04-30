@@ -1,0 +1,30 @@
+// checkbox checked color variant
+.ckbox-color-variant(@type, @color) {
+  .ckbox-@{type} input[type="checkbox"]:checked + label:before {
+    border-color: darken(@color, 5%);
+    background-color: @color;
+  }
+}
+
+// radio color variant
+.rdio-color-variant(@type, @color) {
+  .rdio-@{type} input[type="radio"]:checked + label {
+    &:before { border-color: darken(@color, 5%); }
+    &:after { background-color: @color; }
+  }
+}
+
+// table head variant
+.table-head-variant(@color) {
+  > thead > tr > th {
+    background-color: @color;
+  }
+}
+
+.table-variant(@border-color; @head-bg; @head-text) {
+  border-color: @border-color;
+  > thead > tr > th {
+    background-color: @head-bg;
+    color: @head-text;
+  }
+}

@@ -1,0 +1,230 @@
+// your core variables and mixins
+@import "core.less";
+
+// Organizations
+
+.panel-steps {
+  background-color: #656971;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+
+  li {
+    display: inline-block;
+    float: left;
+    color: #bbb;
+    padding: 10px 35px 10px 40px;
+    position: relative;
+    font-size: @font-size-base;
+
+    &.active,
+    &.done {
+      background-color: #515151;
+      color: #fff;
+    }
+
+    &.done {
+      background-color: #333;
+      color: #fff;
+    }
+
+    &:after {
+      border-left: 20px solid #656971;
+      border-top: 20px solid rgba(0, 0, 0, 0);
+      border-bottom: 20px solid rgba(0, 0, 0, 0);
+      content: "";
+      display: inline-block;
+      position: absolute;
+      right: -20px;
+      top: 0;
+      z-index: 50;
+    }
+
+    &:before {
+      border-left: 20px solid rgba(255,255,255,0.15);
+      border-top: 20px solid rgba(0, 0, 0, 0);
+      border-bottom: 20px solid rgba(0, 0, 0, 0);
+      content: "";
+      display: inline-block;
+      position: absolute;
+      right: -21px;
+      top: 0;
+      z-index: 49;
+    }
+
+    &.active:after {
+      border-left: 20px solid #515151;
+      border-top: 20px solid rgba(0, 0, 0, 0);
+      border-bottom: 20px solid rgba(0, 0, 0, 0);
+      content: "";
+      display: inline-block;
+      position: absolute;
+      right: -20px;
+      top: 0;
+      z-index: 50;
+    }
+
+    &.done:after {
+      border-left: 20px solid #333;
+      border-top: 20px solid rgba(0, 0, 0, 0);
+      border-bottom: 20px solid rgba(0, 0, 0, 0);
+      content: "";
+      display: inline-block;
+      position: absolute;
+      right: -20px;
+      top: 0;
+      z-index: 50;
+    }
+  }
+}
+
+.video-wrapper {
+  padding: 20px;
+  .border-radius();
+}
+
+.video-wrapper h5 {
+  margin-top: 0;
+
+  .video-sample {
+    height: 220px;
+    margin: 20px 0;
+    position: relative;
+
+    &:before {
+      font-family: 'Glyphicons Halflings';
+      content: '\e029';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: #fff;
+      opacity: 0.3;
+      font-size: 54px;
+      margin-left: -20px;
+      margin-top: -10px;
+    }
+  }
+}
+
+.ckbox-addr {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 12px;
+}
+
+
+// Profile Settings
+
+.panel-profile-settings {
+  margin-top: 20px;
+
+  .control-label { margin-top: 5px; }
+}
+
+.panel-compref {
+  h5 {
+    border-bottom: 1px solid #ddd;
+    font-weight: normal;
+    padding-bottom: 8px;
+    font-size: 13px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    font-size: @font-size-base;
+
+    strong,
+    small {
+      display: block;
+      line-height: normal;
+    }
+  }
+}
+
+
+// Organizations Settings
+
+.accordion-group {
+  margin-top: 20px;
+
+  .accordion-item {
+    border: 1px solid #ddd;
+    position: relative;
+    margin-top: -1px;
+    position: relative;
+
+    &:first-child,
+    &:first-child .accordion-title {
+      .border-radius(@border-radius-base @border-radius-base 0 0);
+    }
+
+    .accordion-title {
+      background-color: #f7f7f7;
+      padding: 10px 10px 10px 35px;
+      font-size: 14px;
+      margin: 0;
+      cursor: pointer;
+
+      &:before {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        font-family: 'FontAwesome';
+        content: '\f054';
+        color: #ccc;
+      }
+    }
+
+    &.open .accordion-title {
+      border-bottom: 1px solid #ddd;
+
+      &:before { content: '\f078'; }
+    }
+
+    .accordion-body {
+      background-color: #fff;
+      padding: 15px;
+    }
+  }
+}
+
+.table-users {
+  .btn-group {
+    margin: 0;
+
+    > .btn {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: none;
+    }
+  }
+
+  .dropdown-menu > li {
+    font-size: 12px;
+  }
+}
+
+.orgsettings-panel .formfooter {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: 0;
+  .border-radius(0 0 @border-radius-base @border-radius-base);
+}
+
+.add-user-modal .select2-container .select2-choice {
+  line-height: 28px;
+}
+
+
+
+

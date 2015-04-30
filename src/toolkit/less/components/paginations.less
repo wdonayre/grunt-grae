@@ -1,0 +1,52 @@
+
+.pagination {
+  > li {
+    &:first-child {
+      > a,
+      > span {
+        .border-left-radius(@border-radius-base);
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        .border-right-radius(@border-radius-base);
+      }
+    }
+
+    > a,
+    > span {
+      color: #636e7b;
+      &:hover,
+      &:focus {
+        background-color: #e4e7ea;
+      }
+    }
+
+    &.active {
+      > a,
+      > span {
+        &,
+        &:hover,
+        &:focus {
+          background-color: #656971;
+          border-color: #656971;
+        }
+      }
+    }
+  }
+}
+
+.pagination-split {
+  li {
+    margin-left: 5px;
+    display: inline-block;
+    float: left;
+    &:first-child {
+      margin-left: 0;
+    }
+    a {
+      border-radius: @border-radius-base;
+    }
+  }
+}

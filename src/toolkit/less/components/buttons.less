@@ -1,0 +1,56 @@
+.btn {
+  .transition(all 0.2s ease-out 0s);
+  &:focus { outline: none; }
+
+  &:active,
+  &.active {
+    outline: none;
+    .box-shadow(none);
+  }
+}
+
+
+// Additional Colorrs
+.btn-white { .button-variant(#444; #fff; #ccc); }
+.btn-brown { .button-variant(#fff; #583f26; darken(#583f26, 5%)); }
+.btn-black { .button-variant(#fff; #333; #222); }
+.btn-pink { .button-variant(#fff; #f579e8; darken(#f579e8, 5%)); }
+.btn-darkblue { .button-variant(#fff; #2e4678; darken(#2e4678, 5%)); }
+.btn-orange { .button-variant(#fff; #f38108; darken(#f38108, 5%)); }
+
+
+.btn-group.open .dropdown-toggle {
+  .box-shadow(none);
+}
+
+// Danger and error appear as red
+.btn-danger {
+  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+
+/* Button Search */
+.btn-search {
+  position: absolute;
+  position: absolute;
+  right: 1px;
+  height: 38px;
+  width: 40px;
+  border: none;
+  top: 1px;
+  border-radius: 0 2px 2px 0px;
+  background:none;
+  &:hover{
+    background:#f5f5f5;
+  }
+  &:focus{
+    outline:none;
+  }
+  &:before {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    content: '\f002';
+    font-family: 'FontAwesome';
+    color: #999;
+  }
+}

@@ -1,0 +1,19 @@
+.selection-group {
+  .input-group;
+
+  .selection-group-addon{
+    .input-group-addon;
+
+    &:first-child{
+      border-right:0;
+      border-radius:@border-radius-base 0 0 @border-radius-base;
+    }
+  }
+
+  .selection-group-addon + .select2-container  {
+    a,ul{
+      border-radius:0 @border-radius-base @border-radius-base 0;
+    }
+
+  }
+}
